@@ -13,7 +13,7 @@ export default function LinkCard({
     IconSource,
 }: LinkCardProps){
     return (
-        <Link href={link}>
+        <Link href={link} target="_blank">
             <div className="border p-2 rounded-md bg-card hover:shadow-md transition-all ease-in-out flex items-center align-middle justify-between hover:scale-105">
                 <IconSource weight="regular" size={42} className="text-primary"/>
                 <div className="w-[2px] h-10 rounded-sm bg-secondary" />
