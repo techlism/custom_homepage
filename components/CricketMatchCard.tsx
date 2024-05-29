@@ -5,8 +5,8 @@ export default function CricketMatchCard({matchData} : {matchData : CricbuzzMatc
     return(
         <Link href={matchData.href}>
             <div className="bg-card rounded-md border p-2 hover:shadow-sm transform ease-in-out transition-all my-2">
-                <p className="opacity-80">{matchData.matchDetails}</p>
-                <Separator/>
+                {matchData.matchDetails && <p className="opacity-80">{matchData.matchDetails}</p>}                
+                {matchData.matchDetails && <Separator/>}
                 <p className="font-semibold my-2">{matchData.title}</p>
                 <div className="flex flex-row">
                     <div className="mr-2 text-lg">

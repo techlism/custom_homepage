@@ -31,18 +31,19 @@ async function cricbuzz() {
             const cbmatches : CricbuzzMatchData[] = [];
 
             ulElements.each((index, element) => {
-                const title = $(element).find('a').attr('title');
+                
                 const href = $(element).find('a').attr('href') || "";
+                const title = $(element).find('a').attr('title') || href.split("/")[1].split('-').join(' ').toUpperCase() || "";
                 const team1 = $(element).find('div.cb-hmscg-tm-bat-scr span').eq(0).text();
                 const score1 = $(element).find('div.cb-hmscg-tm-bat-scr .cb-ovr-flo').eq(1).text();
                 const team2 = $(element).find('div.cb-hmscg-tm-bwl-scr span').eq(0).text();
                 const score2 = $(element).find('div.cb-hmscg-tm-bwl-scr .cb-ovr-flo').eq(1).text();
                 const result = $(element).find('div.cb-mtch-crd-state').text() || '';
-                const matchDetails = $(element).find('div.cb-mtch-crd-hdr div.cb-col-90').attr('title') || "";
+                const matchDetails = $(element).find('div.cb-mtch-crd-hdr div.cb-col-90').attr('title') || href.split("/")[1].split('-').join(' ').toUpperCase() || "";
 
                 // console.log(matchDetails);
                 const matchData : CricbuzzMatchData = {
-                    title: title || "",
+                    title: title,
                     href: "https://cricbuzz.com" + href,
                     team1: team1,
                     score1: score1,
