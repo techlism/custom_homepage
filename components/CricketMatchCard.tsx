@@ -4,7 +4,7 @@ import { Separator } from "./ui/separator";
 export default function CricketMatchCard({matchData} : {matchData : CricbuzzMatchData}){
     return(
         <Link href={matchData.href}>
-            <div className="bg-card rounded-md border p-2 hover:shadow-sm transform ease-in-out transition-all">
+            <div className="bg-card rounded-md border p-2 hover:shadow-sm transform ease-in-out transition-all my-2">
                 <p className="opacity-80">{matchData.matchDetails}</p>
                 <Separator/>
                 <p className="font-semibold my-2">{matchData.title}</p>

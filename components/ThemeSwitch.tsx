@@ -27,7 +27,7 @@ const DarkModeSwitch = () =>{
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
-          <div className="w-[9%] flex justify-center align-middle items-center min-h-[90px] p-2 rounded-md border bg-card">
+          <div className="w-[11%] flex justify-center align-middle items-center min-h-[90px] p-2 rounded-md border bg-card">
             <button onClick={changeTheme} className="transition-colors bg-transparent
               border-0 hover:bg-transparent">
             { theme==='light' ? 

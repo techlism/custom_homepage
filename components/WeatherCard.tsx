@@ -59,7 +59,7 @@ const WeatherWidget: React.FC = () => {
   }
 
   return (
-    <div className="rounded-md hover:shadow-sm transform ease-in-out transition-all w-[90%]">
+    <div className="rounded-md hover:shadow-sm transform ease-in-out transition-all w-[88%]">
       <div className='border rounded-md bg-card p-2'>
         <p className='font-semibold text-xl'>{currentTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })}</p>
         <Separator className='my-2'/>
