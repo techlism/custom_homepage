@@ -13,6 +13,7 @@ export interface CricbuzzMatchData {
     score2: string;
     result: string;
     matchDetails : string;
+    matchState? : string | undefined;
 }
 
 async function cricbuzz() {
@@ -38,8 +39,9 @@ async function cricbuzz() {
                 const score1 = $(element).find('div.cb-hmscg-tm-bat-scr .cb-ovr-flo').eq(1).text();
                 const team2 = $(element).find('div.cb-hmscg-tm-bwl-scr span').eq(0).text();
                 const score2 = $(element).find('div.cb-hmscg-tm-bwl-scr .cb-ovr-flo').eq(1).text();
-                const result = $(element).find('div.cb-mtch-crd-state').text() || '';
-                const matchDetails = $(element).find('div.cb-mtch-crd-hdr div.cb-col-90').attr('title') || href.split("/")?.[3]?.split('-').join(' ').toUpperCase() || "";
+                const result = $(element).find('div.cb-mtch-crd-state').attr('title') || '';
+                const matchDetails = $(element).find('div.cb-mtch-crd-hdr div.cb-col-90').attr('title') || href.split("/")?.[3]?.split('-').join(' ').toUpperCase() || "";        
+                // console.log(matchState);
 
                 // console.log(matchDetails);
                 const matchData : CricbuzzMatchData = {
@@ -50,7 +52,7 @@ async function cricbuzz() {
                     team2: team2,
                     score2: score2,
                     result: result,
-                    matchDetails : matchDetails
+                    matchDetails : matchDetails,    
                 };
             
                 cbmatches.push(matchData);
@@ -66,7 +68,7 @@ async function cricbuzz() {
 export default async function CricketTracker() {
     const cricbuzzData = await cricbuzz();
     return(
-        <ScrollArea className="grid grid-cols-1 w-full h-[156px] p-2 border rounded-md m-auto">
+        <ScrollArea className="grid grid-cols-1 w-full h-[166px] p-2 border rounded-md m-auto items-center align-middle">
             {cricbuzzData?.map((match, index) => (<CricketMatchCard key={index} matchData={match} />))}
         </ScrollArea>
     )

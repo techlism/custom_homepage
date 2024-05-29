@@ -12,6 +12,7 @@ export default function SearchBar() {
         <form onSubmit={handleSearch} className="flex justify-between items-center w-full p-2 border rounded-md shadow-sm">
             <Input type="text" className="border-none shadow-none mr-2 font-medium focus:rounded-md text-lg py-4 focus-visible:rounded-md" placeholder="Search Google"/>
             <Button type="submit" variant={'ghost'} className="p-0">
+                <span className="sr-only">Search</span>
                 <ListMagnifyingGlass size={42}/>
             </Button>
         </form>

@@ -35,6 +35,7 @@ const DarkModeSwitch = () =>{
               :
               <Sun size={35} />
             }
+            <span className="sr-only">Dark Mode Button</span>
           </button>
           </div>    
 
