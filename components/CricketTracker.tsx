@@ -39,7 +39,7 @@ async function cricbuzz() {
                 const team2 = $(element).find('div.cb-hmscg-tm-bwl-scr span').eq(0).text();
                 const score2 = $(element).find('div.cb-hmscg-tm-bwl-scr .cb-ovr-flo').eq(1).text();
                 const result = $(element).find('div.cb-mtch-crd-state').text() || '';
-                const matchDetails = $(element).find('div.cb-mtch-crd-hdr div.cb-col-90').attr('title') || href.split("/")?.[2].split('-').join(' ').toUpperCase() || "";
+                const matchDetails = $(element).find('div.cb-mtch-crd-hdr div.cb-col-90').attr('title') || href.split("/")?.[3].split('-').join(' ').toUpperCase() || "";
 
                 // console.log(matchDetails);
                 const matchData : CricbuzzMatchData = {
