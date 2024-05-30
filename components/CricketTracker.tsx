@@ -68,7 +68,7 @@ async function cricbuzz() {
 export default async function CricketTracker() {
     const cricbuzzData = await cricbuzz();
     return(
-        <ScrollArea className="grid grid-cols-1 w-full h-[166px] p-2 border rounded-md m-auto items-center align-middle">
+        <ScrollArea className="grid grid-cols-1 w-full h-[170px] p-2 border rounded-md m-auto items-center align-middle">
             {cricbuzzData?.map((match, index) => (<CricketMatchCard key={index} matchData={match} />))}
         </ScrollArea>
     )
