@@ -3,7 +3,7 @@ import { CricbuzzMatchData } from "./CricketTracker";
 import { Separator } from "./ui/separator";
 export default function CricketMatchCard({matchData} : {matchData : CricbuzzMatchData}){
     return(
-        <Link href={matchData.href}>
+        <Link href={matchData.href} target={'_blank'}>
             <div className="bg-card rounded-md border p-2 hover:shadow-sm transform ease-in-out transition-all my-2">
                 {matchData.matchDetails && <p className="opacity-80">{matchData.matchDetails}</p>}                
                 {matchData.matchDetails && <Separator/>}
