@@ -9,17 +9,17 @@ export default function CricketMatchCard({matchData} : {matchData : CricbuzzMatc
                 {matchData.matchDetails && <Separator/>}
                 <p className="font-semibold my-2">{matchData.title}</p>
                 <div className="flex flex-row align-middle items-center">
-                    <div className="mr-2 text-lg">
+                    <div className="mr-2 text-md">
                         <p>{matchData.team1}</p>
                         <p>{matchData.score1}</p>
                     </div>
                     <div className="w-[2px] bg-secondary rounded-sm min-h-10 mr-2" />
-                    <div className="text-lg">
+                    <div className="text-md">
                         <p>{matchData.team2}</p>
                         <p>{matchData.score2}</p>
                     </div>
                 </div>
-                {matchData.result && <p className="text-md text-primary">{matchData.result}</p>}
+                {matchData.result && <p className="text-sm font-bold text-primary">{matchData.result}</p>}
             </div>       
         </Link>
     )
