@@ -60,4 +60,23 @@
     body {
       @apply bg-background text-foreground;
     }
+    ::-webkit-scrollbar {
+      width: 5px;
+  
+    }
+    /* the buttons on the scrollbar (arrows pointing upwards and downwards) */
+    ::-webkit-scrollbar-button {
+      display: none;
+    }
+    
+    /* the draggable scrolling handle */
+    ::-webkit-scrollbar-thumb {
+      background: #b2b2b299; 
+      border-radius: 3px;
+    }
+    
+    /* on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555; 
+    }      
   }

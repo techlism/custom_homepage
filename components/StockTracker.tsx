@@ -184,19 +184,19 @@ const StockTracker = async () => {
                 <p className="font-semibold">S&amp;P 500</p>
                 <Separator />
                 <p>{snpData?.regularMarketPrice}</p>
-                <p>{snpData?.change_percentage}%</p>
+                <p className={snpData?.change_percentage.includes("-") ? "text-red-500" : "text-green-500"}>{snpData?.change_percentage}%</p>
             </div>
             <div className="border p-2 rounded-md font-medium text-left transition-all ease-in-out transform hover:scale-105 hover:shadow-sm bg-card">
                 <p className="font-semibold">Sensex</p>
                 <Separator />
                 <p>{sensexData?.current_value}</p>
-                <p>{sensexData?.change_percentage}</p>
+                <p className={sensexData?.change_percentage.includes("-") ? "text-red-500" : "text-green-500"}>{sensexData?.change_percentage}</p>
             </div>
             <div className="border p-2 rounded-md font-medium text-left transition-all ease-in-out transform hover:scale-105 hover:shadow-sm bg-card">
                 <p className="font-semibold">Nifty</p>
                 <Separator />
                 <p>{niftyData?.current_value}</p>
-                <p>{niftyData?.change_percentage}</p>
+                <p className={niftyData?.change_percentage.includes("-") ? "text-red-500" : "text-green-500"}>{niftyData?.change_percentage}</p>
             </div>
         </div>
     );

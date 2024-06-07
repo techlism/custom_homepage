@@ -1,6 +1,7 @@
+'use client'
 import Link from "next/link";
-import { CricbuzzMatchData } from "./CricketTracker";
 import { Separator } from "./ui/separator";
+import { CricbuzzMatchData } from "@/lib/types";
 export default function CricketMatchCard({matchData} : {matchData : CricbuzzMatchData}){
     return(
         <Link href={matchData.href} target={'_blank'}>

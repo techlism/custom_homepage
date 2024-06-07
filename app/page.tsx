@@ -10,9 +10,9 @@ export default async function Home() {
 		<SearchBar/>
 		<LinksContainer />
 		{/* Widgets Start */}
-		<CricketTracker/>
 		<WeatherAndThemeWidget/>
 		<StockTracker/>
+		<CricketTracker/>		
 		{/* Widgets End */}
 	</main>	
   )
